@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<!-- Demonstrates form -->
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet">
+        <title>say my name</title>
+        <script src="script.js"></script>
+        <script>
+            function check_answer()
+            {
+                if(document.querySelector('#answer').value == "Heisenberg")
+                {
+                    document.querySelector('#answer').style.backgroundColor = 'green';
+                    document.querySelector('#answer').parentElement.querySelector('.feedback').innerHTML = "You're goddamn right";
+                }
+                else
+                {
+                    document.querySelector('#answer').style.backgroundColor = 'red';
+                    document.querySelector('#answer').parentElement.querySelector('.feedback').innerHTML = 'Incorrect!';
+                }
+            }
+        </script>
+    </head>
+    <body class="centered">
+        <img src="https://static.wikia.nocookie.net/villains/images/6/65/Walter_White2.jpg/revision/latest?cb=20230109113855"/>
+        <div class="section">
+            <hr>
+            <!-- TODO: Add free response question here -->
+            <h2>Say my name!</h2>
+            <input autocomplete="off" autofocus id="answer" placeholder="Answer" type="text">
+            <button onclick="check_answer()">Check Answer</button>
+            <p class = "feedback"></p>
+        </div>
+        <button id="back" onclick="back()"> Back to Homepage</button>
+    </body>
+</html>

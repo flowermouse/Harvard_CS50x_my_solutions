@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="styles.css" rel="stylesheet">
+        <title>current time</title>
+        <script src="script.js"></script>
+    </head>
+    <body class="centered">
+        <!-- 用于显示函数结果的空白元素 -->
+        <h1 id="currentTime"></h1>
+        <script>
+            function getCurrentTime() {
+                var currentDate = new Date();
+                var hours = currentDate.getHours();
+                var minutes = currentDate.getMinutes();
+                var seconds = currentDate.getSeconds();
+
+                // 格式化时间，确保小时、分钟和秒数始终为两位数
+                hours = (hours < 10 ? "0" : "") + hours;
+                minutes = (minutes < 10 ? "0" : "") + minutes;
+                seconds = (seconds < 10 ? "0" : "") + seconds;
+
+                // 返回格式化后的时间字符串
+                return hours + ":" + minutes + ":" + seconds;
+            }
+
+            // 获取当前时间并将其显示在页面上
+            document.getElementById("currentTime").textContent = getCurrentTime();
+
+            // 每秒更新一次时间
+            setInterval(function() {
+                document.getElementById("currentTime").textContent = getCurrentTime();
+            }, 1000);
+        </script>
+        <button id="back" onclick="back()"> Back to Homepage</button>
+    </body>
+</html>

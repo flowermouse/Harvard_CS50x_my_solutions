@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+
+            function check()
+            {
+                document.querySelector('#A').addEventListener('click', function(){
+                    document.querySelector('#A').style.backgroundColor = 'red';
+                    document.querySelector('#A').parentElement.querySelector('.feedback').innerHTML = 'Incorrect!';
+                })
+                document.querySelector('#B').addEventListener('click', function(){
+                    document.querySelector('#B').style.backgroundColor = 'green';
+                    document.querySelector('#B').parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                })
+                document.querySelector('#C').addEventListener('click', function(){
+                    document.querySelector('#C').style.backgroundColor = 'red';
+                    document.querySelector('#C').parentElement.querySelector('.feedback').innerHTML = 'Incorrect!';
+                })
+                document.querySelector('#D').addEventListener('click', function(){
+                    document.querySelector('#D').style.backgroundColor = 'red';
+                    document.querySelector('#D').parentElement.querySelector('.feedback').innerHTML = 'Incorrect!';
+                })
+            }
+
+            function check_answer()
+            {
+                if(document.querySelector('#answer').value == "Maga" || document.querySelector('#answer').value == "MAGA")
+                {
+                    document.querySelector('#answer').style.backgroundColor = 'green';
+                    document.querySelector('#answer').parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                }
+                else
+                {
+                    document.querySelector('#answer').style.backgroundColor = 'red';
+                    document.querySelector('#answer').parentElement.querySelector('.feedback').innerHTML = 'Incorrect!';
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Who is the next president of United States?</h3>
+                <button id="A" onclick="check()"> Joe Biden</button>
+                <button id="B" onclick="check()"> Donald J. Trump</button>
+                <button id="C" onclick="check()"> Ron DeSantis</button>
+                <button id="D" onclick="check()"> Nikki Haley</button>
+                <p class = "feedback"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the greatest motto of all time?</h3>
+                <input autocomplete="off" autofocus id="answer" placeholder="Answer" type="text">
+                <button onclick="check_answer()">Check Answer</button>
+                <p class = "feedback"></p>
+            </div>
+        </div>
+    </body>
+</html>

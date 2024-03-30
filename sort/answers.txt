@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?:Because the Omega complexity of the selection sort is the highest, which consumed most time in the reversed sort.
+
+sort2 uses: Merge sort
+
+How do you know?:the random running time equals to the sort1, but its reversed and sorted running time is less.
+
+sort3 uses: Selection sort
+
+How do you know?:the random running time is the lowest, and the reversed and sorted time almost the same as the random, because the algorithms is a Theta type.

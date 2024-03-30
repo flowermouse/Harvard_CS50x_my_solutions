@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <table class="table table-hover">
+        <tbody>
+            <tr>
+                <th>Price</th>
+                <td>{{quote.price}}</td>
+            </tr>
+            <tr>
+                <th>Symbol</th>
+                <td>{{quote.symbol}}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,22 @@
+10 HTML tags
+1.<p></p>
+2.<a></a>
+3.<em></em>
+4.<strong></strong>
+5.<meta>
+6.<link>
+7.<script>
+8.<img>
+9.<br></br>
+10.<button></button>
+11.<footer></footer>
+12.<form></form>
+13.<li></li>
+
+5 CSS properties
+1.text-align
+2.color
+3.font-size
+4.font-weight
+5.max-width
+6.height
